@@ -1,8 +1,10 @@
 <script lang="ts">
+  import { calculateMonthlyRepayment } from './calculator';
+
   let loanAmount: number = 200000;
   let interestRate: number = 5.0;
 
-  $: monthlyPayment = (loanAmount * (interestRate / 100)) / 12;
+  $: monthlyPayment = calculateMonthlyRepayment(loanAmount, interestRate);
 </script>
 
 <div class="container mt-4">
