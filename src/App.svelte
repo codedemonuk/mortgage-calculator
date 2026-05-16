@@ -30,7 +30,16 @@
 
           <!-- Interest Rate Slider -->
           <div class="mb-4">
-            <label for="interestRate" class="form-label fw-bold">Interest Rate: {interestRate}%</label>
+            <label for="interestRate" class="form-label fw-bold">Interest Rate (%)</label>
+            <input 
+              type="number" 
+              id="interestRateInput"
+              class="form-control mb-2" 
+              bind:value={interestRate}
+              min="3" 
+              max="10" 
+              step="0.01"
+            />
             <input 
               type="range" 
               id="interestRate"
