@@ -18,7 +18,8 @@
           <div class="mb-4">
             <label for="loanAmount" class="form-label fw-bold">Loan Amount (£)</label>
             <input 
-              type="number" 
+              type="number"
+              inputmode="decimal"
               id="loanAmount"
               class="form-control form-control-lg" 
               bind:value={loanAmount}
@@ -32,7 +33,8 @@
           <div class="mb-4">
             <label for="interestRate" class="form-label fw-bold">Interest Rate (%)</label>
             <input 
-              type="number" 
+              type="number"
+              inputmode="decimal"
               id="interestRateInput"
               class="form-control mb-2" 
               bind:value={interestRate}
