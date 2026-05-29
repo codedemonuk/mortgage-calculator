@@ -1,11 +1,16 @@
 <script lang="ts">
   import { calculateMonthlyRepayment } from './calculator';
+  import VERSION from '../package.json' assert { type: 'json' };
 
   let loanAmount: number = 200000;
   let interestRate: number = 5.0;
 
   $: monthlyPayment = calculateMonthlyRepayment(loanAmount, interestRate);
 </script>
+
+<svelte:head>
+  <meta name="app-version" content={VERSION.version} />
+</svelte:head>
 
 <div class="container mt-4">
   <div class="row justify-content-center">
